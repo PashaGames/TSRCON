@@ -1,0 +1,22 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint",
+      "chai-friendly"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "overrides": [{
+      "files": "./test/*.test.ts",
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "off"
+      },
+    }],
+    "rules": { 
+        "no-console": 2 // pls dont leave console statements ok ty!
+    }
+}

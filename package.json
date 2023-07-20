@@ -1,0 +1,30 @@
+{
+  "name": "tsrcon",
+  "version": "1.0.0",
+  "description": "Source RCON client implementing https://developer.valvesoftware.com/wiki/Source_RCON_Protocol",
+  "main": "index.js",
+  "author": "PashaGames",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "ts-node index.ts",
+    "lint": "eslint . --ext .ts",
+    "test": "nyc ./node_modules/.bin/_mocha 'test/**/*.ts'"
+  },
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@testdeck/mocha": "^0.3.3",
+    "@types/chai": "^4.3.5",
+    "@types/node": "^20.4.2",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "chai": "^4.3.7",
+    "eslint": "^8.45.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.1",
+    "nyc": "^15.1.0",
+    "ts-mockito": "^2.6.1",
+    "ts-node": "^10.9.1"
+  }
+}
