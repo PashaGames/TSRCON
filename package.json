@@ -5,12 +5,17 @@
   "main": "index.js",
   "author": "PashaGames",
   "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "nodemon",
     "start": "ts-node index.ts",
     "lint": "eslint . --ext .ts",
-    "build": "",
-    "test": "nyc ./node_modules/.bin/_mocha 'test/**/*.ts'"
+    "build": "tsc",
+    "prepublishOnly" : "npm test && npm run lint",
+    "test": "nyc ./node_modules/.bin/_mocha 'test/**/*.ts'",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
